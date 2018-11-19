@@ -23,7 +23,7 @@ class NormalEvals(object):
                 Y += list(numpy.imag(path.vertices[:-1]))
                 Z += [epsilon] * (len(path.vertices) - 1)
         contours = pyplot.tricontour(X, Y, Z, levels=epsilons,
-                                     colors=pyplot.rcParams['axes.color_cycle']
+                                    colors=['b', 'g', 'r', 'c', 'm', 'y', 'k']
                                      )
         plot_finish(contours, **kwargs)
         return contours
